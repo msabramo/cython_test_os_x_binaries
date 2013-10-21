@@ -5,7 +5,7 @@ install:
 # This takes a long time to build Cython:
 # - sudo easy_install Cython
 # This is almost instantaneous:
-- sudo easy_install --find-links=https://github.com/msabramo/cython/releases/tag/0.19.1 Cython
+- sudo time easy_install --find-links=https://github.com/msabramo/cython/releases/tag/0.19.1 Cython
 
 test:
 - python -c 'import Cython; print(Cython)'
