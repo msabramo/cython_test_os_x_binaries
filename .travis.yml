@@ -1,11 +1,12 @@
 language: objective-c
 
 install:
-- which easy_install
+- sudo easy_install --upgrade setuptools pip wheel
+- sudo time pip install --use-wheel https://github.com/msabramo/cython/releases/download/0.19.1_Windows/Cython-0.19.1-cp27-none-win32.whl
+- python -c 'import Cython; print(Cython)'
+- sudo pip uninstall --yes Cython
 # This takes a long time to build Cython:
 # - sudo easy_install Cython
 # This is almost instantaneous:
 - sudo time easy_install --find-links=https://github.com/msabramo/cython/releases/tag/0.19.1 Cython
-
-script:
 - python -c 'import Cython; print(Cython)'
