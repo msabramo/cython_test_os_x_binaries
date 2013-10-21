@@ -1,0 +1,7 @@
+language: objective-c
+
+install:
+- sudo easy-install Cython
+
+test:
+- python -c 'import Cython; print(Cython)'
